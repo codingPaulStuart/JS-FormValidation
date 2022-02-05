@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<!--
+     *  Author       | Paul Stuart
+     *  Date Written | 29/11/18
+     *  Notes        | HTML form for Javascript class, validation of credit card details
+-->
+
+<html lang="en">
+
+<head>
+    <title>Javascript Form</title>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/style1.css" />
+</head>
+
+<body>
+    <div class="container">
+
+        <h2>Personal Details</h2>
+        <div>
+            <form name="userForm" onsubmit="return validateForm()">
+
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" onfocus="changeBgd(this)" onblur="resetBgd(this)" placeholder="Your Name..">
+                <span id="firstnameError"></span><br /><br />
+
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" onfocus="changeBgd(this)" onblur="resetBgd(this)" placeholder="Your Surname..">
+                <span id="lastnameError"></span><br /><br />
+
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" onfocus="changeBgd(this)" onblur="resetBgd(this)" placeholder="email@emailaddress.com..">
+                <span id="emailError"></span><br /><br />
+
+                <label for="mobile">Mobile</label>
+                <input type="text" id="mobile" name="mobile" onfocus="changeBgd(this)" onblur="resetBgd(this)" placeholder="Mobile Number..">
+                <span id="mobileError"></span><br /><br />
+
+                <label for="street">Street Number and Name</label>
+                <input type="text" id="street" name="street" onfocus="changeBgd(this)" onblur="resetBgd(this)" placeholder="Street Address..">
+                <span id="streetError"></span><br /><br />
+
+                <label for="suburb">Suburb</label>
+                <input type="text" id="suburb" name="suburb" onfocus="changeBgd(this)" onblur="resetBgd(this)" placeholder="Suburb Name..">
+                <span id="suburbError"></span><br /><br />
+
+                <label for="postcode">Postcode</label>
+                <input type="text" id="postcode" name="postcode" onfocus="changeBgd(this)" onblur="resetBgd(this)" placeholder="Postcode..">
+                <span id="postcodeError"></span><br /><br />
+
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" onfocus="changeBgd(this)" onblur="resetBgd(this)" placeholder="Town or City..">
+                <span id="cityError"></span><br /><br />
+
+                <label for="country">Country</label>
+                <select id="country" name="country" onfocus="changeBgd(this)" onblur="resetBgd(this)">
+                    <option value="0">Choose a Country</option>
+                    <option value="1">Australia</option>
+                    <option value="2">New Zealand</option>
+                    <option value="3">Canada</option>
+                    <option value="4">USA</option>
+                </select><span id="countryError"></span><br /><br />
+
+                <h2>Credit Card Details</h2>
+
+                <label for="cardnumber">Credit Card Number</label>
+                <input type="text" id="cardnumber" name="cardnumber" onfocus="changeBgd(this)" onblur="resetBgd(this)" placeholder="XXXX XXXX XXXX XXXX">
+                <span id="cardnumberError"></span><br />
+
+
+                <label for="Month">Month</label>
+                <select id="expirmonth" name="expirmonth" onfocus="changeBgd(this)" onblur="resetBgd(this)">
+
+                    <option value="0">Month</option>
+                    <option value="1">Jan</option>
+                    <option value="2">Feb</option>
+                    <option value="3">Mar</option>
+                    <option value="4">Apr</option>
+                    <option value="5">May</option>
+                    <option value="6">Jun</option>
+                    <option value="7">Jul</option>
+                    <option value="8">Aug</option>
+                    <option value="9">Sep</option>
+                    <option value="10">Oct</option>
+                    <option value="11">Nov</option>
+                    <option value="12">Dec</option>
+                </select><span id="expirmonthError"></span>
+
+                <label for="year">Year</label>
+                <select id="expiryear" name="expiryear" onfocus="changeBgd(this)" onblur="resetBgd(this)">
+                    <option value="0">choose year</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                </select><span id="expiryearError"></span><br />
+
+                <label for="ccv">CCV</label>
+                <input type="text" id="ccv" name="ccv" onfocus="changeBgd(this)" onblur="resetBgd(this)" placeholder="3 digit CCV..">
+                <span id="ccvError"></span><br />
+
+                <label for="cardtype">Card Type</label>
+
+                <select id="cardtype" name="cardtype" onfocus="changeBgd(this)" onblur="resetBgd(this)">
+                    <option value="0">Please Choose</option>
+                    <option value="1">VISA</option>
+                    <option value="2">MasterCard</option>
+                    <option value="3">Amercian Express</option>
+                </select><span id="cardtypeError"></span><br /><br />
+                <input type="submit" value="submit">
+                <br/><br/>
+                <div id="help"><a href="../html/help.html">Click here for Help</a></div>
+                <br/>
+                <div id="website" onclick="loadsites()">Click here for more Links</div>
+            </form>
+        </div>
+    </div>
+    <script language="JavaScript" type="text/javascript" src="../js/formjava.js"></script>
+    </body>
+
+</html>
+
+    
+    
